@@ -1,0 +1,385 @@
+
+body {
+  background: radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(160, 82, 45, 0.03) 1px, transparent 1px), 
+    radial-gradient(ellipse at 20% 80%, rgba(139, 69, 19, 0.15) 0%, transparent 30%),
+    radial-gradient(ellipse at 80% 20%, rgba(160, 82, 45, 0.12) 0%, transparent 25%),
+    radial-gradient(ellipse at 60% 60%, rgba(205, 133, 63, 0.08) 0%, transparent 40%), 
+    linear-gradient(135deg, #f4f1e8 0%, #ede6d6 25%, #e8dcc6 50%, #ddd0b4 75%, #d4c4a8 100%);
+  background-size: 3px 3px, 5px 5px, 200px 150px, 180px 120px, 250px 200px, 100% 100%;
+  background-attachment: fixed;
+  font-family: "Cinzel", "MedievalSharp", serif;
+  color: #2f1b14;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+  margin: 0;
+  position: relative;
+}
+
+.parchemin {
+  position: relative;
+  max-width: 900px;
+  padding: 4rem 5rem;
+  background: radial-gradient(circle at 30% 30%, rgba(139, 69, 19, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 70% 70%, rgba(160, 82, 45, 0.015) 1px, transparent 1px),
+    radial-gradient(ellipse at 15% 25%, rgba(101, 67, 33, 0.08) 0%, transparent 15%),
+    radial-gradient(ellipse at 85% 75%, rgba(139, 69, 19, 0.06) 0%, transparent 20%),
+    radial-gradient(ellipse at 45% 85%, rgba(160, 82, 45, 0.04) 0%, transparent 25%),
+    radial-gradient(ellipse at 75% 15%, rgba(205, 133, 63, 0.03) 0%, transparent 30%),
+    radial-gradient(ellipse at 90% 10%, rgba(139, 69, 19, 0.12) 0%, transparent 8%),
+    radial-gradient(ellipse at 10% 90%, rgba(160, 82, 45, 0.1) 0%, transparent 12%), 
+    linear-gradient(180deg, #faf8f0 0%, #f5f0e6 15%, #f0e8d6 35%, #ebe0c6 60%, #e6d8b6 85%, #e0d0a6 100%);
+  background-size: 2px 2px, 4px 4px, 120px 80px, 150px 100px, 180px 120px, 200px 150px, 60px 40px, 80px 60px, 100% 100%;
+  border: none;
+  border-radius: 0;
+  clip-path: polygon(
+    2% 0%,
+    98% 1%,
+    99% 3%,
+    97% 8%,
+    100% 15%,
+    98% 25%,
+    99% 35%,
+    97% 45%,
+    100% 55%,
+    98% 65%,
+    99% 75%,
+    97% 85%,
+    100% 95%,
+    98% 100%,
+    95% 98%,
+    85% 99%,
+    75% 97%,
+    65% 100%,
+    55% 98%,
+    45% 99%,
+    35% 97%,
+    25% 100%,
+    15% 98%,
+    8% 97%,
+    3% 99%,
+    1% 98%,
+    0% 95%,
+    2% 85%,
+    0% 75%,
+    2% 65%,
+    0% 55%,
+    3% 45%,
+    1% 35%,
+    2% 25%,
+    0% 15%,
+    3% 8%,
+    1% 3%
+  );
+  box-shadow:
+    0 0 0 1px rgba(139, 69, 19, 0.1),
+    0 2px 4px rgba(139, 69, 19, 0.1),
+    0 8px 16px rgba(139, 69, 19, 0.08),
+    0 16px 32px rgba(0, 0, 0, 0.1),
+    /* Inner shadows for depth */
+    inset 0 0 60px rgba(139, 69, 19, 0.03),
+    inset 0 0 120px rgba(160, 82, 45, 0.02);
+  position: relative;
+  overflow: hidden;
+}
+
+.parchemin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(139, 69, 19, 0.15) 0%, transparent 3%),
+    radial-gradient(circle at 80% 70%, rgba(160, 82, 45, 0.12) 0%, transparent 2%),
+    radial-gradient(circle at 60% 20%, rgba(101, 67, 33, 0.08) 0%, transparent 4%),
+    radial-gradient(circle at 30% 80%, rgba(139, 69, 19, 0.1) 0%, transparent 3%),
+    linear-gradient(0deg, rgba(139, 69, 19, 0.08) 0%, transparent 5%),
+    linear-gradient(90deg, rgba(139, 69, 19, 0.06) 0%, transparent 3%),
+    linear-gradient(180deg, rgba(139, 69, 19, 0.08) 0%, transparent 5%),
+    linear-gradient(270deg, rgba(139, 69, 19, 0.06) 0%, transparent 3%);
+  pointer-events: none;
+}
+
+
+.parchemin::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      90deg,
+      transparent 32%,
+      rgba(139, 69, 19, 0.04) 33%,
+      rgba(139, 69, 19, 0.06) 33.5%,
+      rgba(139, 69, 19, 0.04) 34%,
+      transparent 35%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 66%,
+      rgba(160, 82, 45, 0.03) 67%,
+      rgba(160, 82, 45, 0.05) 67.5%,
+      rgba(160, 82, 45, 0.03) 68%,
+      transparent 69%
+    ), 
+    linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(139, 69, 19, 0.03) 25%,
+      rgba(139, 69, 19, 0.05) 25.5%,
+      rgba(139, 69, 19, 0.03) 26%,
+      transparent 27%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 74%,
+      rgba(160, 82, 45, 0.02) 75%,
+      rgba(160, 82, 45, 0.04) 75.5%,
+      rgba(160, 82, 45, 0.02) 76%,
+      transparent 77%
+    );
+  pointer-events: none;
+}
+
+.parchment-decoration {
+  text-align: center;
+  font-size: 2rem;
+  color: #8b4513;
+  margin: 1rem 0;
+}
+
+.parchment-decoration.top::before {
+  content: "⚜️ ═══════════════════════════════════════════════════════════════ ⚜️";
+  font-size: 1rem;
+}
+
+.parchment-decoration.bottom::before {
+  content: "⚜️ ═══════════════════════════════════════════════════════════════ ⚜️";
+  font-size: 1rem;
+}
+
+
+h1 {
+  text-align: center;
+  font-family: "Uncial Antiqua", "Cinzel", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #8b4513;
+  text-shadow: 2px 2px 0px #d2b48c, 4px 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+
+.subtitle {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+  color: #a0522d;
+  font-style: italic;
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+ol {
+  padding-left: 2rem;
+  position: relative;
+}
+
+li {
+  margin-bottom: 1.8rem;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  font-family: "Cinzel", serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+li::marker {
+  color: #8b4513;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+
+.signature {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #a0522d;
+}
+
+.signature p {
+  font-family: "Uncial Antiqua", serif;
+  color: #8b4513;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.seal {
+  font-size: 3rem;
+  color: #8b4513;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: linear-gradient(180deg, #fff8dc 0%, #f5e6d3 50%, #e6d2b5 100%);
+  border: 6px solid #8b4513;
+  border-radius: 25px;
+  padding: 3rem 4rem;
+  text-align: center;
+  box-shadow: 0 0 0 3px #a0522d, 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 0 50px rgba(139, 69, 19, 0.1);
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-header h2 {
+  font-family: "Uncial Antiqua", serif;
+  font-size: 2.5rem;
+  color: #8b4513;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+}
+
+.modal-subtitle {
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+  color: #a0522d;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.birthday-decoration {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+
+.birthday-message {
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  color: #2f1b14;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.medieval-btn {
+  background: linear-gradient(145deg, #d2b48c, #a0522d);
+  border: 3px solid #8b4513;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2f1b14;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.medieval-btn:hover {
+  background: linear-gradient(145deg, #e6d2b5, #8b4513);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.medieval-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #8b4513;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #a0522d;
+  transform: scale(1.1);
+}
+
+
+.confetti {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  top: -20px;
+  animation: fall linear forwards;
+  z-index: 15;
+  border-radius: 50%;
+}
+
+.confetti.gold {
+  background: radial-gradient(circle, #ffd700, #ffa500);
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+}
+
+.confetti.bronze {
+  background: radial-gradient(circle, #cd7f32, #8b4513);
+  box-shadow: 0 0 6px rgba(205, 127, 50, 0.8);
+}
+
+.confetti.silver {
+  background: radial-gradient(circle, #c0c0c0, #808080);
+  box-shadow: 0 0 6px rgba(192, 192, 192, 0.8);
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .parchemin {
+    padding: 2rem 3rem;
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  li {
+    font-size: 1.1rem;
+  }
+
+  .modal-content {
+    margin: 1rem;
+    padding: 2rem 3rem;
+  }
+
+  .modal-header h2 {
+    font-size: 2rem;
+  }
+}
